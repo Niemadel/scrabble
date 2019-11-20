@@ -35,6 +35,16 @@ public class ScrabbleTest {
     }
 
     @Test
+    void given_word_ABCD_return_score_of_two() {
+        Scrabble scrabble = new Scrabble();
+        String word = "ABCD";
+
+        int score = scrabble.computeScore(word);
+
+        assertThat(score).isEqualTo(9);
+    }
+
+    @Test
     void given_word_CABBAGE_return_score_of_14() {
         Scrabble scrabble = new Scrabble();
         String word = "CABBAGE";
@@ -52,6 +62,26 @@ public class ScrabbleTest {
         int score = scrabble.computeScore(word);
 
         assertThat(score).isEqualTo(24);
+    }
+
+    @Test
+    void given_unsuported_character_return_score_of_0() {
+        Scrabble scrabble = new Scrabble();
+        String word = "'";
+
+        int score = scrabble.computeScore(word);
+
+        assertThat(score).isEqualTo(0);
+    }
+
+    @Test
+    void given_unsuported_character2_return_score_of_0() {
+        Scrabble scrabble = new Scrabble();
+        String word = "LA VIE EST BELLE";
+
+        int score = scrabble.computeScore(word);
+
+        assertThat(score).isEqualTo(0);
     }
 
 }
