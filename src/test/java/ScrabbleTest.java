@@ -22,6 +22,6 @@ public class ScrabbleTest {
 
         int score = scrabble.computeScore(word);
 
-        assertThat(score).isEqualTo(1);
+        assertThat(score).isEqualTo(2);
     }
 }
