@@ -24,4 +24,14 @@ public class ScrabbleTest {
 
         assertThat(score).isEqualTo(2);
     }
+
+    @Test
+    void given_word_CABBAGE_return_score_of_14() {
+        Scrabble scrabble = new Scrabble();
+        String word = "CABBAGE";
+
+        int score = scrabble.computeScore(word);
+
+        assertThat(score).isEqualTo(14);
+    }
 }
