@@ -1,4 +1,3 @@
-import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,6 +25,16 @@ public class ScrabbleTest {
     }
 
     @Test
+    void given_word_AB_return_score_of_two() {
+        Scrabble scrabble = new Scrabble();
+        String word = "AB";
+
+        int score = scrabble.computeScore(word);
+
+        assertThat(score).isEqualTo(4);
+    }
+
+    @Test
     void given_word_CABBAGE_return_score_of_14() {
         Scrabble scrabble = new Scrabble();
         String word = "CABBAGE";
@@ -34,4 +43,15 @@ public class ScrabbleTest {
 
         assertThat(score).isEqualTo(14);
     }
+
+    @Test
+    void given_word_XYLOPHONE_return_score_of_14() {
+        Scrabble scrabble = new Scrabble();
+        String word = "XYLOPHONE";
+
+        int score = scrabble.computeScore(word);
+
+        assertThat(score).isEqualTo(24);
+    }
+
 }
