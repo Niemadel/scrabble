@@ -45,7 +45,7 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_word_CABBAGE_return_score_of_14() {
+    void given_word_CABBAGE_return_score_of_fourteen() {
         Scrabble scrabble = new Scrabble();
         String word = "CABBAGE";
 
@@ -55,7 +55,7 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_word_XYLOPHONE_return_score_of_14() {
+    void given_word_XYLOPHONE_return_score_of_twenty_four() {
         Scrabble scrabble = new Scrabble();
         String word = "XYLOPHONE";
 
