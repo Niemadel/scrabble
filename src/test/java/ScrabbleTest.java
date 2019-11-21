@@ -25,7 +25,7 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_word_AB_return_score_of_two() {
+    void given_word_AB_return_score_of_four() {
         Scrabble scrabble = new Scrabble();
         String word = "AB";
 
@@ -35,7 +35,7 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_word_ABCD_return_score_of_two() {
+    void given_word_ABCD_return_score_of_nine() {
         Scrabble scrabble = new Scrabble();
         String word = "ABCD";
 
