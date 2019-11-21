@@ -65,9 +65,9 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_empty_string_return_score_of_0() {
+    void given_blank_return_score_of_0() {
         Scrabble scrabble = new Scrabble();
-        String word = "'";
+        String word = " ";
 
         int score = scrabble.computeScore(word);
 
@@ -95,7 +95,7 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_unsuported_character_blank_return_score_of_0() {
+    void given_string_with_blank_return_score_of_0() {
         Scrabble scrabble = new Scrabble();
         String word = "LA VIE EST BELLE";
 
