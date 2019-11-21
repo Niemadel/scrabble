@@ -6,10 +6,12 @@ public class Scrabble {
         if (word.isEmpty()) {
             return 0;
         }
+        else{
         String[] splitedWord = word.split("");
-        return Arrays.stream(splitedWord)
-                .mapToInt(LetterPoints::getPointsByLetter)
-                .sum();
+            return Arrays.stream(splitedWord)
+                    .mapToInt(LetterPoints::getPointsByLetter)
+                    .sum();
+        }
 
     }
 
