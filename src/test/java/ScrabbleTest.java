@@ -65,7 +65,7 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_unsuported_character_return_score_of_0() {
+    void given_unsuported_character_single_quote_return_score_of_0() {
         Scrabble scrabble = new Scrabble();
         String word = "'";
 
@@ -75,13 +75,24 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_unsuported_character2_return_score_of_0() {
+    void given_unsuported_character_arobase_return_score_of_0() {
+        Scrabble scrabble = new Scrabble();
+        String word = "@";
+
+        int score = scrabble.computeScore(word);
+
+        assertThat(score).isEqualTo(0);
+    }
+
+    @Test
+    void given_unsuported_character_blank_return_score_of_0() {
         Scrabble scrabble = new Scrabble();
         String word = "LA VIE EST BELLE";
 
         int score = scrabble.computeScore(word);
 
-        assertThat(score).isEqualTo(0);
+        assertThat(score).isEqualTo(18);
+
     }
 
 }

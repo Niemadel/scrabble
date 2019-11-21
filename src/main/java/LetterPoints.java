@@ -24,11 +24,15 @@ public enum LetterPoints {
     }
 
     public static int getPointsByLetter(String letter) {
-       return Arrays.stream(LetterPoints.values())
+        Optional<LetterPoints> score = Arrays.stream(LetterPoints.values())
                 .filter(lt -> lt.contains(letter)).limit(1)
-                .findFirst()
-                .get()
-                .points;
+                .findFirst();
+        if (score.isPresent()) {
+            return score.get().points;
+        } else {
+            return 0;
+        }
+
 
     }
 }
