@@ -24,7 +24,7 @@ public enum LetterPoints {
 
     public static int getPointsByLetter(String letter) {
         return Arrays.stream(LetterPoints.values())
-                .filter(lt -> lt.contains(letter))
+                .filter(lt -> lt.contains(letter)).limit(1)
                 .findFirst()
                 .map(letterPoints -> letterPoints.points)
                 .orElse(0);
