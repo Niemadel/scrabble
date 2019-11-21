@@ -105,4 +105,14 @@ public class ScrabbleTest {
 
     }
 
+    @Test
+    void given_empty_string_return_score_of_0() {
+        Scrabble scrabble = new Scrabble();
+        String word = "";
+
+        int score = scrabble.computeScore(word);
+
+        assertThat(score).isEqualTo(0);
+    }
+
 }
