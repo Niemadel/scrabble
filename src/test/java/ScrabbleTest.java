@@ -95,7 +95,7 @@ public class ScrabbleTest {
     }
 
     @Test
-    void given_string_with_blank_return_score_of_eigtheen() {
+    void given_string_LA_VIE_EST_BELLE_with_blank_return_score_of_eigtheen() {
         Scrabble scrabble = new Scrabble();
         String word = "LA VIE EST BELLE";
 
