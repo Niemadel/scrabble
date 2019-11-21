@@ -27,7 +27,8 @@ public enum LetterPoints {
         return Arrays.stream(LetterPoints.values())
                 .filter(lt -> lt.contains(letter)).limit(1)
                 .findFirst()
-                .map(letterPoints -> letterPoints.points).orElse(0);
+                .map(letterPoints -> letterPoints.points)
+                .orElse(0);
 
     }
 }
